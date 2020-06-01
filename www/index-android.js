@@ -216,4 +216,9 @@ inAppPurchase.getReceipt = function () {
   return Promise.resolve('');
 };
 
+if (!window.plugins) {
+  window.plugins = {};
+}
+window.plugins.inAppPurchase = inAppPurchase;
+
 module.exports = inAppPurchase;
