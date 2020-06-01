@@ -154,4 +154,9 @@ inAppPurchase.restorePurchases = function () {
   });
 };
 
+
+if (!window.plugins) {
+  window.plugins = {};
+}
+window.plugins.inAppPurchase = inAppPurchase;
 module.exports = inAppPurchase;
